@@ -27,7 +27,6 @@ app.use('/images', express.static(path.join(directory,'/public/images')));
 
 // Middleware
 app.use(express.json());
-app.use(helmet());
 app.use(morgan("common"));
 
 app.use("/api/auth", authRoute);
