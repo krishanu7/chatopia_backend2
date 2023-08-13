@@ -20,11 +20,11 @@ const connectToMongoDB = async () => {
     console.log("Error connecting to MongoDB:", error);
   }
 };
+mongoose.set('strictQuery', false);
 connectToMongoDB();
 const directory = __dirname;
 app.use('/images', express.static(path.join(directory,'/public/images')));
 
-// Middleware
 app.use(express.json());
 app.use(morgan("common"));
 
