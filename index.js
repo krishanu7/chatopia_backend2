@@ -30,7 +30,7 @@ app.use(express.json());
 app.use(morgan("common"));
 
 const corsOptions = {
-  origin: "https://gentle-muffin-4e47ae.netlify.app",
+  origin: 'https://main--gentle-muffin-4e47ae.netlify.app',
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 };
 
