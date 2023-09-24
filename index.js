@@ -30,7 +30,7 @@ app.use(express.json());
 app.use(morgan("common"));
 
 app.use(cors({
-  origin: "https://thunderous-phoenix-82e7f3.netlify.app/", 
+  origin: "https://main--gentle-muffin-4e47ae.netlify.app/", 
 }));
 
 app.use("/api/auth", authRoute);
