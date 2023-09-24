@@ -29,9 +29,13 @@ app.use('/images', express.static(path.join(directory,'/public/images')));
 app.use(express.json());
 app.use(morgan("common"));
 
-app.use(cors({
-  origin: "https://main--gentle-muffin-4e47ae.netlify.app/", 
-}));
+const corsOptions = {
+  origin: "https://gentle-muffin-4e47ae.netlify.app",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+};
+
+app.use(cors(corsOptions));
+
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
